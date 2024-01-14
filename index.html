@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Mylibrary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>私の本棚<a href="cgi-bin/my_library.cgi">登録書籍一覧</a></h1>
+    </header>
+    <h2>お好きな方法で書籍を検索してください</h2>
+    <article>
+    <img class="main-img" src="img/reading-3355230_1280.jpg" alt="">  
+    <div class="input-box">
+    <form action="cgi-bin/book_list.cgi" method="get">
+        <label for="">キーワード:<input type="search" name="code1" id="" maxlength="15"></label>
+        <label for="">タイトル:<input type="search" name="code2" id="" maxlength="15"></label>
+        <label for="">作者:<input type="search" name="code3" id="" maxlength="15"></label>
+        <div class="submit">
+        <input type="submit" value="検索">
+        </div>
+    </form>
+    <form action="cgi-bin/book_web.cgi" method="get">
+        <label for="">ISBN(13):<input type="text" name="code4" id="" maxlength="13" minlength="13" required></label>
+        <div class="submit">
+        <input type="submit" value="送信">
+        </div>
+    </form>
+    </div>
+    </article>  
+    <footer>
+        <p><small>2023 nini-factory</small></p>
+    </footer>     
+</body>
+</html>

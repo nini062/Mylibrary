@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mylibrary</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>私の本棚</h1>
+    </header>
+    <div class="head-wrap">
+        <div class="img-wrap">
+            <img src={} alt="">
+        </div>
+    <div class="title-wrap">
+    <h3>{}</h3>
+    <table>
+        <tr><th>作者</th><td>{}</td></tr>
+        <tr><th>発行者</th><td>{}</td></tr>
+        <tr><th>発行日</th><td>{}</td></tr>
+    </table>
+    </div>
+    </div>
+        <p><span>説明：</span><br>{}</p>
+    <a href="../index.html">戻る</a>
+    <form class="library-form" action="book_library.cgi" method="post">
+        <div class="grid-wrap">
+        C-コード(任意):<input type="text" name="code5" id="" maxlength="5" minlength="5">
+        この書籍を：
+        <div class="radio-wrap">        
+        <label for=""><input type="radio" name="havecheck" value="hc1" checked>持ってる</label>
+        <label for=""><input type="radio" name="havecheck" value="hc2">持ってない</label>
+        </div>
+        この書籍は：
+        <div class="radio-wrap">    
+        <label for=""><input type="radio" name="readcheck" value="rc1" checked>未読</label>
+        <label for=""><input type="radio" name="readcheck" value="rc2">途中</label>
+        <label for=""><input type="radio" name="readcheck" value="rc3">既読</label>
+        </div>
+        感想：
+        <textarea name="thoughts" id="" cols="30" rows="3" maxlength="100"></textarea>
+        </div>
+        <input type="hidden" name="hidden" value={}>
+        <div class="submit"><input type="submit" value="登録"></div>
+    </form>    
+    <footer>
+        <p><small>2023 nini-factory</small></p>
+    </footer>  
+</body>
+</html>
